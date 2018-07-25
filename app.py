@@ -13,6 +13,7 @@ class MyHandler(BaseHTTPRequestHandler):
     self.end_headers()
     with open('logo.png', 'rb') as f:
       self.wfile.write(f.read())
+      self.wfile.write('My dream is to fly over the rainbow, so high!')
 
 try:
   server = HTTPServer(('', PORT_NUMBER), MyHandler)
