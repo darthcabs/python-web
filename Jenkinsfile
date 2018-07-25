@@ -28,10 +28,10 @@ pipeline {
           }
 
           dir ('./charts/preview') {
-           container('python') {
-             sh "make preview"
-             sh "jx preview --app $APP_NAME --dir ../.."
-           }
+            container('python') {
+              sh "make preview"
+              sh "jx preview --app $APP_NAME --dir ../.."
+            }
           }
         }
       }
